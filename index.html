@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Lunar Phases Interactive Diagram</title>
+	<!-- Moon Clipart: https://pixabay.com/photos/dark-full-moon-luna-moon-night-1853877/ -->
+	<link rel="icon" type="32x32" href="https://cdn.pixabay.com/photo/2012/04/10/17/38/moon-26619__480.png">
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+	<link href="https://fonts.googleapis.com/css?family=Neucha&display=swap" rel="stylesheet">
+
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+	<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<div id="diagram">
+		<!-- Earth: https://pixabay.com/photos/earth-blue-planet-globe-planet-11009/ -->
+		<img id="earth" src="https://cdn.pixabay.com/photo/2011/12/13/14/28/earth-11009_1280.jpg">
+
+		<!-- New Moon: https://pixabay.com/illustrations/flare-reflex-light-bokeh-1115349/ -->
+		<img id="new" data-toggle="modal" data-target="#newmoon" src="https://cdn.pixabay.com/photo/2015/12/31/08/58/lichtreflex-1115349_1280.jpg">
+
+		<!-- Crescent Moon: https://pixabay.com/photos/crescent-moon-lunar-918793/ -->
+		<img id="waxingcrescent" data-toggle="modal" data-target="#waxingcrescentmoon" src="https://cdn.pixabay.com/photo/2015/09/02/12/58/crescent-918793_1280.jpg">
+
+		<!-- Quarter Moon: https://pixabay.com/photos/moon-first-quarter-quarter-lunar-647718/ -->
+		<img id="firstquarter" data-toggle="modal" data-target="#firstquartermoon" src="https://cdn.pixabay.com/photo/2015/02/24/19/40/moon-647718_1280.jpg">
+
+		<!-- Gibbous Moon: https://pixabay.com/photos/moon-night-space-sky-nature-solar-1101913/ -->
+		<img id="waxinggibbous" data-toggle="modal" data-target="#waxinggibbousmoon" src="https://cdn.pixabay.com/photo/2015/12/21/00/55/moon-1101913_1280.jpg">
+
+		<!-- Full Moon: https://pixabay.com/photos/astronomy-full-moon-luna-moon-1869760/ -->
+		<img id="full" data-toggle="modal" data-target="#fullmoon" src="https://cdn.pixabay.com/photo/2016/11/29/13/14/astronomy-1869760_1280.jpg">
+
+		<img id="waninggibbous" data-toggle="modal" data-target="#waninggibbousmoon" src="https://cdn.pixabay.com/photo/2015/12/21/00/55/moon-1101913_1280.jpg">
+
+		<img id="lastquarter" data-toggle="modal" data-target="#lastquartermoon" src="https://cdn.pixabay.com/photo/2015/02/24/19/40/moon-647718_1280.jpg">
+
+		<img id="waningcrescent" data-toggle="modal" data-target="#waningcrescentmoon" src="https://cdn.pixabay.com/photo/2015/09/02/12/58/crescent-918793_1280.jpg">
+	</div>
+
+	<div id="information">
+		<div class="modal fade" id="fullmoon" role="dialog">
+	    <div class="modal-dialog modal-lg">
+	      <div class="modal-content">
+	        <div class="modal-header">
+	          <button type="button" class="close" data-dismiss="modal">&times;</button>
+	          <h2 class="modal-title">Full Moon</h2>
+	        </div>
+	        <div class="modal-body">
+	        	<img src="https://cdn.pixabay.com/photo/2016/11/29/13/14/astronomy-1869760_1280.jpg" width="500px"><br><br>
+
+	        	<p>Lunar Phase: Full Moon</p>
+	        	<p>Lunar Cycle: about 2 weeks</p>
+	        	<p>Percentage Illuminated: 100%</p>
+
+	        	<p>
+	        		The full moon phase happens when the Earth is between the Moon and the Sun. It is halfway through the lunar cycle, and the moon is fully visible from Earth.
+	        	</p>
+	        </div>
+	        <div class="modal-footer">
+	          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	        </div>
+	      </div>
+	    </div>
+	  </div>
+
+	  <div class="modal fade" id="waxingcrescentmoon" role="dialog">
+	    <div class="modal-dialog modal-lg">
+	      <div class="modal-content">
+	        <div class="modal-header">
+	          <button type="button" class="close" data-dismiss="modal">&times;</button>
+	          <h2 class="modal-title">Waxing Crescent Moon</h2>
+	        </div>
+	        <div class="modal-body">
+	        	<img src="https://cdn.pixabay.com/photo/2015/09/02/12/58/crescent-918793_1280.jpg" width="500px"><br><br>
+
+	        	<p>Lunar Phase: Waxing Crescent Moon</p>
+	        	<p>Lunar Cycle: </p>
+	        	<p>Percentage Illuminated:</p>
+
+	        	<p>
+	        		The waxing crescent moon happens between the new moon and first quarter moon phases. As the moon slowly waxes, or gradually becomes bigger, it forms a crescent shape.
+	        	</p>
+	        </div>
+	        <div class="modal-footer">
+	          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	        </div>
+	      </div>
+	    </div>
+	  </div>
+
+	  <div class="modal fade" id="firstquartermoon" role="dialog">
+	    <div class="modal-dialog modal-lg">
+	      <div class="modal-content">
+	        <div class="modal-header">
+	          <button type="button" class="close" data-dismiss="modal">&times;</button>
+	          <h2 class="modal-title">First Quarter Moon</h2>
+	        </div>
+	        <div class="modal-body">
+	        	<img src="https://cdn.pixabay.com/photo/2015/02/24/19/40/moon-647718_1280.jpg" width="500px"><br><br>
+
+	        	<p>Lunar Phase: First Quarter Moon</p>
+	        	<p>Lunar Cycle:</p>
+	        	<p>Percentge Illuminated: about 50%</p>
+
+	        	<p>
+	        		The first quarter moon phase is where the moon is a quarter of the way into the lunar cycle. Half of the moon is visible from Earth.
+	        	</p>
+	        </div>
+	        <div class="modal-footer">
+	          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	        </div>
+	      </div>
+	    </div>
+	  </div>
+
+	  <div class="modal fade" id="waxinggibbousmoon" role="dialog">
+	    <div class="modal-dialog modal-lg">
+	      <div class="modal-content">
+	        <div class="modal-header">
+	          <button type="button" class="close" data-dismiss="modal">&times;</button>
+	          <h2 class="modal-title">Waxing Gibbous Moon</h2>
+	        </div>
+	        <div class="modal-body">
+	        	<img src="https://cdn.pixabay.com/photo/2015/12/21/00/55/moon-1101913_1280.jpg" width="500px"><br><br>
+
+	        	<p>Lunar Phase: Waxing Gibbous Moon</p>
+	        	<p>Lunar Cycle:</p>
+	        	<p>Percentage Illuminated:</p>
+
+	        	<p>
+	        		After the first quarter moon phase, the moon continues to wax, reaching the waxing gibbous moon phase. This is the phase between the first quarter moon and full moon phases, and most of the moon is now visible from Earth.
+	        	</p>
+	        </div>
+	        <div class="modal-footer">
+	          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	        </div>
+	      </div>
+	    </div>
+	  </div>
+
+	  <div class="modal fade" id="waninggibbousmoon" role="dialog">
+	    <div class="modal-dialog modal-lg">
+	      <div class="modal-content">
+	        <div class="modal-header">
+	          <button type="button" class="close" data-dismiss="modal">&times;</button>
+	          <h2 class="modal-title">Waning Gibbous Moon</h2>
+	        </div>
+	        <div class="modal-body">
+	        	<img src="https://cdn.pixabay.com/photo/2015/12/21/00/55/moon-1101913_1280.jpg" width="500px"><br><br>
+
+	        	<p>Lunar Phase: Waning Gibbous Moon</p>
+	        	<p>Lunar Cycle:</p>
+	        	<p>Percentage Illuminated:</p>
+
+	        	<p>
+	        		After the full moon phase, the moon slowly wanes, or gradually becomes smaller. The waning gibbous moon is between the full moon and last quarter moon phases, and still most of the moon is visible from Earth.
+	        	</p>
+	        </div>
+	        <div class="modal-footer">
+	          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	        </div>
+	      </div>
+	    </div>
+	  </div>
+
+	  <div class="modal fade" id="lastquartermoon" role="dialog">
+	    <div class="modal-dialog modal-lg">
+	      <div class="modal-content">
+	        <div class="modal-header">
+	          <button type="button" class="close" data-dismiss="modal">&times;</button>
+	          <h2 class="modal-title">Last Quarter Moon</h2>
+	        </div>
+	        <div class="modal-body">
+	        	<img src="https://cdn.pixabay.com/photo/2015/02/24/19/40/moon-647718_1280.jpg" width="500px"><br><br>
+
+	        	<p>Lunar Phase: Last Quarter Moon (Third Quarter Moon)</p>
+	        	<p>Lunar Cycle:</p>
+	        	<p>Percentage Illuminated: about 50%</p>
+
+	        	<p>
+	        		During this phase, the moon is a three quarters of the way through the lunar cycle. About half of the moon is visible from Earth.
+	        	</p>
+	        </div>
+	        <div class="modal-footer">
+	          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	        </div>
+	      </div>
+	    </div>
+	  </div>
+
+	  <div class="modal fade" id="waningcrescentmoon" role="dialog">
+	    <div class="modal-dialog modal-lg">
+	      <div class="modal-content">
+	        <div class="modal-header">
+	          <button type="button" class="close" data-dismiss="modal">&times;</button>
+	          <h2 class="modal-title">Waning Crescent Moon</h2>
+	        </div>
+	        <div class="modal-body">
+	        	<img src="https://cdn.pixabay.com/photo/2015/09/02/12/58/crescent-918793_1280.jpg" width="500px"><br><br>
+
+	        	<p>Lunar Phase: Waning Crescent Moon</p>
+	        	<p>Lunar Cycle:</p>
+	        	<p>Percentage Illumination:</p>
+
+	        	<p>
+	        		Almost done with the lunar cycle, the moon forms a crescent shape with only a little bit of the moon visible from Earth.
+	        	</p>
+	        </div>
+	        <div class="modal-footer">
+	          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	        </div>
+	      </div>
+	    </div>
+	  </div>
+
+	  <div class="modal fade" id="newmoon" role="dialog">
+	    <div class="modal-dialog modal-lg">
+	      <div class="modal-content">
+	        <div class="modal-header">
+	          <button type="button" class="close" data-dismiss="modal">&times;</button>
+	          <h2 class="modal-title">New Moon</h2>
+	        </div>
+	        <div class="modal-body">
+	        	<img src="https://cdn.pixabay.com/photo/2015/12/31/08/58/lichtreflex-1115349_1280.jpg" width="500px"><br><br>
+
+	        	<p>Lunar Phase: New Moon</p>
+	        	<p>Lunar Cycle: 0 days</p>
+	        	<p>Percentage Illuminated: 0%</p>
+
+	        	<p>
+	        		The new moon phase marks the beginning of the lunar phase. It is invisible from the Earth, and happens when the Moon is between the Sun and Earth and the sunlit part of the Moon faces away from the Earth.
+	        	</p>
+	        </div>
+	        <div class="modal-footer">
+	          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	        </div>
+	      </div>
+	    </div>
+	  </div>
+
+		<div class="modal fade" id="about" role="dialog">
+	    <div class="modal-dialog modal-lg">
+	      <div class="modal-content">
+	        <div class="modal-header">
+	          <button type="button" class="close" data-dismiss="modal">&times;</button>
+	          <h2 class="modal-title">About</h2>
+	        </div>
+	        <div class="modal-body">
+	        	<h4>Image Sources</h4>
+	        	<p>Pixabay</p>
+	        </div>
+	        <div class="modal-footer">
+	          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	        </div>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+	<div id="about">
+		<button type="button" class="btn button" data-toggle="modal" data-target="#about">About</button>
+	</div>
+</body>
+</html>
