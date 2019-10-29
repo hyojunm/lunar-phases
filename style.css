@@ -7,71 +7,107 @@ body {
 	position: absolute;
 	width: 300px;
 	top: 300px;
-	left: 600px;
+	left: 300px;
 }
 
-#new {
+#phase1 {
 	position: absolute;
 	width: 200px;
 	top: 375px;
-	left: 950px;
+	left: 650px;
 	cursor: pointer;
 }
 
-#waxingcrescent {
+#phase2 {
 	position: absolute;
 	width: 200px;
 	top: 160px;
-	left: 835px;
+	left: 535px;
 	cursor: pointer;
 }
 
-#firstquarter {
+#phase3 {
 	position: absolute;
 	width: 250px;
-	top: 70px;
-	left: 635px;
+	top: 100px;
+	left: 335px;
 	cursor: pointer;
 }
 
-#waxinggibbous {
+#phase4 {
 	position: absolute;
 	width: 185px;
 	top: 175px;
-	left: 450px;
+	left: 150px;
 	cursor: pointer;
 }
 
-#full {
+#phase5 {
 	position: absolute;
 	width: 200px;
 	top: 365px;
-	left: 320px;
+	left: 20px;
 	cursor: pointer;
 }
 
-#waninggibbous {
+#phase6 {
 	position: absolute;
 	width: 185px;
 	top: 590px;
-	left: 445px;
+	left: 145px;
 	cursor: pointer;
 }
 
-#lastquarter {
+#phase7 {
 	position: absolute;
 	width: 250px;
-	top: 690px;
-	left: 635px;
+	top: 660px;
+	left: 335px;
 	cursor: pointer;
 }
 
-#waningcrescent {
+#phase8 {
 	position: absolute;
 	width: 200px;
 	top: 590px;
-	left: 835px;
+	left: 535px;
 	cursor: pointer;
+}
+
+#phase2, #phase3, #phase4, #phase5, #phase6, #phase7, #phase8 {
+	display: none;
+}
+
+#phase2info, #phase3info, #phase4info, #phase5info, #phase6info, #phase7info, #phase8info {
+	display: none;
+}
+
+.info {
+	position: absolute;
+	top: 200px;
+	right: 100px;
+	width: 500px;
+	color: white;
+}
+
+#leftarrow {
+	position: absolute;
+	top: 5px;
+	left: 25px;
+	color: darkgray;
+	cursor: pointer;
+}
+
+#rightarrow {
+	position: absolute;
+	top: 5px;
+	right: 25px;
+	color: darkgray;
+	cursor: pointer;
+}
+
+#leftarrow:hover, #rightarrow:hover {
+	color: lightgray;
 }
 
 .button {
@@ -86,4 +122,23 @@ body {
 
 .button:hover {
 	text-decoration: underline;
+}
+
+#navbar {
+	width: 100%;
+	padding: 4px;
+	border-bottom: 4px solid lightgray;
+	color: white;
+}
+
+#footer {
+	background-color: darkgray;
+	color: white;
+	width: 100%;
+	padding: 16px;
+	font-size: 16px;
+	padding-right: 50px;
+	padding-left: 50px;
+	position: absolute;
+	bottom: 0px;
 }
