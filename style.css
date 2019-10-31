@@ -15,7 +15,6 @@ body {
 	width: 200px;
 	top: 375px;
 	left: 640px;
-	cursor: pointer;
 }
 
 #phase2 {
@@ -23,7 +22,6 @@ body {
 	width: 200px;
 	top: 160px;
 	left: 535px;
-	cursor: pointer;
 }
 
 #phase3 {
@@ -31,7 +29,6 @@ body {
 	width: 250px;
 	top: 100px;
 	left: 335px;
-	cursor: pointer;
 }
 
 #phase4 {
@@ -39,7 +36,6 @@ body {
 	width: 185px;
 	top: 175px;
 	left: 150px;
-	cursor: pointer;
 }
 
 #phase5 {
@@ -47,7 +43,6 @@ body {
 	width: 200px;
 	top: 365px;
 	left: 50px;
-	cursor: pointer;
 }
 
 #phase6 {
@@ -55,7 +50,6 @@ body {
 	width: 185px;
 	top: 590px;
 	left: 145px;
-	cursor: pointer;
 }
 
 #phase7 {
@@ -63,7 +57,6 @@ body {
 	width: 250px;
 	top: 660px;
 	left: 335px;
-	cursor: pointer;
 }
 
 #phase8 {
@@ -71,7 +64,6 @@ body {
 	width: 200px;
 	top: 590px;
 	left: 535px;
-	cursor: pointer;
 }
 
 #phase2, #phase3, #phase4, #phase5, #phase6, #phase7, #phase8 {
@@ -132,14 +124,15 @@ body {
 }
 
 #footer {
-	background-color: darkgray;
+	text-align: right;
 	color: white;
-	width: 100%;
+	width: 400px;
 	padding: 16px;
 	font-size: 16px;
 	padding-right: 50px;
 	padding-left: 50px;
 	position: absolute;
+	right: 0px;
 	bottom: 0px;
 }
 
